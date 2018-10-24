@@ -20,23 +20,15 @@
             
        </nav>
   <main>
-       <center><h1>NECESITAN UN NUEVO HOGAR</h1></center>
+       <h1>NECESITAN UN NUEVO HOGAR</h1>
     {% for perro in perro %}
    <div class="textos">  
-        <div class="texto">
-        
-                   <h1>Juanito</h1>
-                  <p>Él es un perro muy tranquilo,le gusta Dormir y comer mucho, vacunados y
-                  desparacitados tienen 6 meses cumplidos </p>
-                   
-          
-        </div>
         <div class="texto">
           
           
           <h1>{{ perro.Nombre }}</h1>
               <p>{{ perro.Raza }}</p>    
-        
+              <p>{{ perro.Estado|linebreaksbr }}</p>
         </div>
         
    </div>  

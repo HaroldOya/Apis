@@ -1,0 +1,86 @@
+@media screen and (min-width: 768px){
+    header{
+        font-family: "tittle";
+        width: 30%;
+        background-color: rgb(55, 139, 46);
+    }
+    nav{
+        width: 70%;
+        text-align: right;
+        background-color: rgb(55, 139, 46);
+        height: auto;
+    }
+
+    .texto{
+        width: 100%;
+        background-color: white;
+        padding: 20px 0px;
+    }
+    
+    
+    .textos{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+      
+    }
+
+    .nav{
+        display: inline-flex;
+        margin: 0px ;
+        text-decoration-line: none;
+        
+        
+       
+    }
+    
+    .nav a{
+        text-decoration: none;
+        padding: 20px 48px;
+        margin: 0%;
+        color: black;    
+    }
+    
+    .nav a:hover{
+        background-color: gray;
+    }
+    
+    nav ul{
+        margin: 0%;
+        
+    }
+
+    input, select{
+        border: 2px solid;
+        border-radius: 4px;
+        height: 30px;
+        width: 250px;
+    }
+    .carousel{
+        width: 700px;
+        margin: 20px;
+        overflow: hidden;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+
+    .carousel ul{
+        list-style: none;
+        width: 2800px;
+        display: flex;
+        animation: slide 20s infinite alternate;
+    }
+    @keyframes slide{
+        0%{margin-left: 0px;}
+        20%{margin-left: 0%;}
+        25%{margin-left: -700px;}
+        45%{margin-left: -700px;}
+        50%{margin-left: -1400px}
+        70%{margin-left: -1400px;}
+        75%{margin-left: -2100px}
+        100%{margin-left: -2100px}
+   
+    }
+}

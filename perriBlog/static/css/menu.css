@@ -1,0 +1,91 @@
+body{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0px;
+}
+img,embed,object,video{
+    max-width: 100%;
+}
+
+ @font-face{
+    font-family: "h1";
+    src: url("./AustieBostKittenKlub.ttf");
+}
+@font-face{
+    font-family: "tittle";
+    src: url("./Cartoon.ttf");
+}
+
+main h1{
+    font-family: "h1";
+}
+*{
+    padding: 0px;
+    margin: 0px;
+}
+ 
+main{
+    font-size: 18px;
+    width: 100%;
+    background-color: rgb(146, 209, 139);
+}
+
+img,embed,object{
+    max-width: 100%;
+}
+
+
+.textos h1{
+    border: solid;
+    border-radius: 30%;
+    box-shadow: 4px 4px grey;
+    margin: 0px;
+}
+footer{
+   
+    background-color: rgb(192, 240, 186);
+    width: 100%;
+    padding: 10px 10px;
+}
+.redes{
+    float: right;
+}
+p{
+    text-align: center;
+    padding: 10px;
+    font-family: "pa";
+    
+}
+
+.texto img{
+    border: solid;
+    box-shadow: 4px 4px grey;
+}
+.Formulario{
+    border: dashed;
+    width: 40%;
+    padding: 50px;
+    margin: 40px 0px;
+
+}
+
+button{
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #1883ba;
+    border-radius: 6px;
+    border: 2px solid #0016b0;
+}
+
+
+
+.banner{
+    background-color: rgb(25, 104, 17);
+    text-align: center;
+}
+
+
