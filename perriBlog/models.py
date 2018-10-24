@@ -7,6 +7,7 @@ class Perro(models.Model):
     Raza = models.CharField(max_length=200)
     Descripcion = models.TextField(max_length=200)
     Estado = models.CharField(max_length=200)
+    publish_date = models.DateTimeField(blank=True, null=True)
 
     def __str__(self):
         return self.Nombre
@@ -16,6 +17,7 @@ class Cliente(models.Model):
     Nombre = models.CharField(max_length=200)
     FechaNac = models.DateTimeField(blank=True, null=True)
     Telefono = models.IntegerField
+    publish_date = models.DateTimeField(blank=True, null=True)
 
     def __str__(self):
         return self.Rut
