@@ -6,6 +6,7 @@
         <title>Mis perris</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="icon" href="{% static 'img/logo.png' %}" />
         <link rel="stylesheet" href="{% static 'css/menu.css' %}">
         <link rel="stylesheet" href="{% static 'css/mainS5.css' %}">
         <link rel="stylesheet" href="{% static 'css/mainMedio.css' %}">
@@ -14,9 +15,37 @@
         
         
     </head>
-    <body>       
+    <body>   
+        <header>
+                <div>
+                
+                     <h1><img src="{% static 'img/logo50.png' %}" alt="logo mis perris"/>MIS PERRIS</h1> 
+                 
+                </div>
+           </header>
+           
+              <nav>
+                
+                   <ul class="menu">
+                       <li class="nav"><a href="{% url 'index' %}">Inicio</a></li>
+                       <li class="nav"><a href="{% url 'registro' %}">Registrate</a></li>
+                       <li class="nav"><a href="{% url 'perri_list' %}">Galería</a></li>
+                    </ul>
+                    
+               </nav>    
             {% block content %}
             {% endblock %}
-
+            <footer>
+                <div class="redes">
+                        <img src="{% static 'img/face50.png' %}" alt="facebook icono"  >
+                        <img src="{% static 'img/insta50.png' %}" alt="instagram icono" >
+                        <img src="{% static 'img/google50.png'%}" alt="google icono" >
+                        <img src="{% static 'img/correo50.png'%}" alt="correo icono" >
+                    </div>
+                &copy; Todos los Derechos Reservados
+                    <div class="redes">
+              </div>
+              
+            </footer>
     </body>
 </html>    

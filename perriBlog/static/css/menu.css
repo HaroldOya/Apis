@@ -17,7 +17,7 @@ img,embed,object,video{
     src: url("./Cartoon.ttf");
 }
 
-main h1{
+main h1, .texto,a{
     font-family: "h1";
 }
 *{

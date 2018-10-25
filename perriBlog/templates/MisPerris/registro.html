@@ -1,0 +1,76 @@
+{% extends 'MisPerris/base.html' %}
+{% load static %}
+{% block content %}
+<main>
+        <center>
+            <h1  style="padding: 20px 0px" ><img src="{% static 'img/logo50.png' %}" alt="logo mis perris"/>Registrate Con Nosotros</h1>
+              <div class="Formulario">
+                      <form >
+                              <aria-label for="txtCorreo">Correo Electronico:</aria-label>
+                              <br/>
+                              <input type="email" maxlength="30"
+                                     minlength="10" id="txtCorreo" 
+                              placeholder="Ingrese Correo Electronico" required/>
+                              <br/>
+                              <span id="validarEmail"></span>
+                              <br/>
+                              <aria-label for="txtRut">Rut:</aria-label>
+                              <br/>
+                              <input type="text" maxlength="12"
+                                     minlength="9" id="txtRut"
+                                     onkeyup="modificarRut()" 
+                              placeholder="Ingrese Rut" required/>
+                              <br/>
+                              <br/>
+                              <aria-label for="txtNombre">Nombre Completo:</aria-label>
+                              <br/>
+                              <input type="text"  id="txtNombre" 
+                              onkeypress="return sololetras(event)"
+                              placeholder="Ingrese Nombre Completo" required />
+                              <br />
+                              <br />
+                              <aria-label for="txtFechaNac">Fecha Nacimiento:</aria-label>
+                              <br/>
+                              <input type="date" id="txtFechaNac" placeholder="ingrese fecha Nacimiento" required
+                              max="2001-01-01"/>
+                              <br/>
+                              <br />
+                              <aria-label for="txtTelefono">Telefono:</aria-label>
+                              <br/>
+                              <input type="number" id="txtTelefono" placeholder="ingrese telefono" required minlength="8" />
+                              <br/>
+                              <br />
+                              <aria-label for="txtRegion">Region</aria-label>
+                              <br/>
+                              <select id="txtRegion" oninput="selectCity()">     
+                              </select>
+                              <br/>
+                              <br />
+                              <aria-label for="txtCity">Ciudad</aria-label>
+                              <br/>
+                              <select id="txtCity">
+                      
+                              </select>
+                              <br/>
+                              <br/>
+                              <aria-label for="txtVivienda">Tipo de Vivienda:</aria-label>
+                              <br/>
+                              <select id="txtVivienda">
+                                  <option>Casa con patio Grande</option>
+                                  <option>Casa con patio pequeño</option>
+                                  <option>Casa sin patio</option>
+                                  <option>Departamento</option>
+                              </select>
+                              <br/>
+                              <br/>
+                              <button>Guardar</button>
+      
+                              <script src="{% static 'js/region.js' %}"></script>
+                              
+                          </form>
+                          <script src="{% static 'js/validator.js' %}"></script>
+                </div>
+
+        </center>     
+    </main>
+{% endblock %}

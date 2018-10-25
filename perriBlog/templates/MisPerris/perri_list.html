@@ -2,31 +2,14 @@
 
 {% block content %}
 
-<header>
-        <div>
-        
-             <h1>MIS PERRIS</h1> 
-         
-        </div>
-   </header>
-   
-      <nav>
-        
-           <ul class="menu">
-               <li class="nav"><a href="index.html">Inicio</a></li>
-               <li class="nav"><a href="registro.html">Registrate</a></li>
-               <li class="nav"><a href="gallery.html">Galería</a></li>
-            </ul>
-            
-       </nav>
   <main>
        <h1>NECESITAN UN NUEVO HOGAR</h1>
+    
     {% for perro in perro %}
-   <div class="textos">  
-        <div class="texto">
+    <div class="textos">  
+            <div class="texto">
           
-          
-          <h1>{{ perro.Nombre }}</h1>
+          <h1><a href="{% url 'perri_detail' pk=perro.pk %}">{{ perro.Nombre }}</a></h1>
               <p>{{ perro.Raza }}</p>    
               <p>{{ perro.Estado|linebreaksbr }}</p>
         </div>
@@ -35,11 +18,5 @@
     
       </main>
       {% endfor %}
-       <footer>
-        &copy; Todos los Derechos Reservados
-            <div class="redes">
-      </div>
-      
-    </footer>
     
 {% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'MisPerris/base.html' %}
+{% load static %}
+{% block content %}
+<main>
+        
+        <div class="carousel">
+            <ul>
+                <li><img src="{% static 'img/perro1.jpg' %}" alt="perro 1 carrusel"></li>
+                <li><img src="{% static 'img/perro2.jpg' %}" alt="perro 2 carrusel"></li>
+                <li><img src="{% static 'img/perro3.jpg' %}" alt="perro 3 carrusel"></li>
+                <li><img src="{% static 'img/perro4.jpg' %}" alt="perro 4 carrusel"></li>
+            </ul>
+            
+  
+          </div>
+          <div class="banner">
+                <h1>FUNDACIÓN COMPROMETIDA</h1>
+            </div>
+
+   
+
+   
+   <div class="textos">  
+      <div class="texto">
+          <h1>Quienes Somos</h1>
+          <p>Nuestra organización fue fundada en la creencia de que los animales tienen derecho a un trato amable y 
+            respetuoso a manos de los seres humanos y deben ser protegidos por la ley. Con sede en la ciudad de Santiago, 
+            Mis Perris mantiene una fuerte presencia local, y con programas que amplían nuestra misión anti-crueldad 
+            en todo el país, que son reconocidos como una organización nacional de protección de los animales. Somos una organización 
+            sin fines de lucro, y estamos orgullosos de presumir cientos de seguidores en todo el país.</p>
+            <picture>
+                    <img src="{% static 'img/perro400.jpg' %}" alt="perro index 1"
+                    sizes="(max-width: 1000px) 200vw, 1000px" 
+                    srcset="{% static 'img/perro400-300.jpg' %} 400w,{% static 'img/perro400.jpg' %} 768w, {% static 'img/perro400.jpg' %} 1000w">
+
+            </picture>
+          
+        </div>
+        <div class="texto">
+          <h1>Misión y Visión</h1>
+          
+              <p>
+                  Misión:Contribuir a la solución del problema de la sobre 
+                  población de mascotas abandonadas que afecta a toda la comunidad.</p>
+              <p>Visión:Alcanzar una ciudad más sustentable implementando 
+                  alternativas éticas, auto financiadas y colaborativas de solución al problema de la sobre población de mascotas abandonadas.</p>
+         
+                  <picture>
+                        <img src="{% static 'img/perro200.jpg' %}" alt="perro index 2"
+                        sizes="(max-width: 1000px) 200vw, 1000px" 
+                        srcset="{% static 'img/perro200-300.jpg' %} 400w, {% static 'img/perro200.jpg' %} 1000w">
+                </picture>   
+        </div>
+   </div>    
+  </main>
+  {% endblock %}
+
