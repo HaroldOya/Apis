@@ -2,21 +2,29 @@
 
 {% block content %}
 
-  <main>
-       <h1>NECESITAN UN NUEVO HOGAR</h1>
-    
-    {% for perro in perro %}
-    <div class="textos">  
+  <main >
+    <div style="text-align: center"><h1>NECESITAN UN NUEVO HOGAR</h1></div>
+
+    <div class="item-galery">  
             <div class="texto">
-          
-          <h1><a href="{% url 'perri_detail' pk=perro.pk %}">{{ perro.Nombre }}</a></h1>
+              
+                {% for perro in perro %}
+                <div class="item-galery-title">
+                    <h1>{{ perro.Nombre }}</h1>
+                </div>
               <p>{{ perro.Raza }}</p>    
+              <img class="img-galery" src="{{ perro.Imagen.url }}" alt="Imagen perro 1">
+              <p>{{ perro.Descripcion }}</p>
               <p>{{ perro.Estado|linebreaksbr }}</p>
-        </div>
+              {% endfor %}
+              
+              </div>
         
    </div>  
+
+   
     
       </main>
-      {% endfor %}
+      
     
 {% endblock %}
