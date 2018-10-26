@@ -13,7 +13,7 @@
                     <h1>{{ perro.Nombre }}</h1>
                 </div>
               <p>{{ perro.Raza }}</p>    
-              
+              <img class="img-galery" src="{{ perro.Imagen.url }}" alt="Imagen perro 1">
               <p>{{ perro.Descripcion }}</p>
               <p>{{ perro.Estado|linebreaksbr }}</p>
               {% endfor %}

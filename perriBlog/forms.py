@@ -7,5 +7,5 @@ class PerroForm(forms.ModelForm):
 
     class Meta:
         model = Perro
-        fields = ('Nombre', 'Raza','Descripcion','Estado',)
+        fields = ('Nombre', 'Raza','Descripcion','Estado','Imagen',)
 
