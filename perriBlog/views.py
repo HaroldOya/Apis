@@ -8,17 +8,15 @@ from django.shortcuts import redirect
 
 # Create your views here.
 def perri_list(request):
-    
-    perro = Perro.objects.order_by('Estado')
-    return render(request, 'MisPerris/perri_list.html', {'perro': perro})
-def listar(request):
+    perro = Perro.objects.order_by('Estado')    
     perros_adoptados = Perro.objects.filter(Estado='Adoptado')
     perros_rescatado = Perro.objects.filter(Estado='Rescatado')
     perros_disponible = Perro.objects.filter(Estado='Disponible')
     context = {'perros_adoptados': perros_adoptados,
                'perros_rescatado': perros_rescatado,
-               'perros_disponible': perros_disponible}
-    return render(request, 'MisPerris/perri_list.html',context)
+               'perros_disponible': perros_disponible,
+               'perros_count': len(perros_adoptados)}
+    return render(request, 'MisPerris/perri_list.html', context )
 
 def index(request):
     return render(request, 'MisPerris/index.html')

@@ -1,30 +1,28 @@
 {% extends 'MisPerris/base.html' %}
-
+{% load static %}
 {% block content %}
+<main >
+  <div style="text-align: center"><h1>NECESITAN UN NUEVO HOGAR</h1></div>
 
-  <main >
-    <div style="text-align: center"><h1>NECESITAN UN NUEVO HOGAR</h1></div>
-
-    <div class="item-galery">  
-            <div class="texto">
-              
-                {% for perro in perro %}
-                <div class="item-galery-title">
-                    <h1>{{ perro.Nombre }}</h1>
-                </div>
-              <p>{{ perro.Raza }}</p>    
-              <img class="img-galery" src="{{ perro.Imagen.url }}" alt="Imagen perro 1">
-              <p>{{ perro.Descripcion }}</p>
-              <p>{{ perro.Estado|linebreaksbr }}</p>
-              {% endfor %}
-              
-              </div>
-        
-   </div>  
-
-   
-    
-      </main>
-      
-    
+  <div class="item-galery">  
+    <div class="texto">
+      {% if perros_count != 0 %}
+        {% for perro in perros_adoptados %}
+          <div class="item-galery-title">
+            <h1>{{ perro.Nombre }}</h1>
+          </div>
+          
+          <p>{{ perro.Raza }}</p>    
+            <img class="img-galery" src="{{ perro.Imagen.url }}" alt="Imagen perro 1">
+          <p>{{ perro.Descripcion }}</p>
+          <p>{{ perro.Estado|linebreaksbr }}</p>
+        {% endfor %}
+      {% else %}
+        <div class="item-galery">
+        <h2>No hay Perros adoptados</h2>
+        </div>
+      {% endif %}
+    </div>
+  </div>  
+</main>   
 {% endblock %}
