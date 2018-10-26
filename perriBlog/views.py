@@ -8,7 +8,7 @@ from django.shortcuts import redirect
 
 # Create your views here.
 def perri_list(request):
-    perro = Perro.objects.order_by('Estado')    
+    perro = Perro.objects.order_by('Estado')     
     perros_adoptados = Perro.objects.filter(Estado='Adoptado')
     perros_rescatado = Perro.objects.filter(Estado='Rescatado')
     perros_disponible = Perro.objects.filter(Estado='Disponible')
