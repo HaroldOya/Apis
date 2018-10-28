@@ -81,7 +81,9 @@ button{
     border: 2px solid #0016b0;
 }
 
-
+.titulos{
+    background-color: rgb(192, 240, 186);
+}
 
 .banner{
     background-color: rgb(25, 104, 17);

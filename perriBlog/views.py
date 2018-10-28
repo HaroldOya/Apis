@@ -14,8 +14,7 @@ def perri_list(request):
     perros_disponible = Perro.objects.filter(Estado='Disponible')
     context = {'perros_adoptados': perros_adoptados,
                'perros_rescatado': perros_rescatado,
-               'perros_disponible': perros_disponible,
-               'perros_count': len(perros_adoptados)}
+               'perros_disponible': perros_disponible}
     return render(request, 'MisPerris/perri_list.html', context )
 
 def index(request):
@@ -26,12 +25,14 @@ def registro(request):
  
 
 def perro_new(request):
-    if request.method == "PERRO":
-        form = PerroForm(request.PERRO)
+    if request.method == "POST":
+        form = PerroForm(request.POST)
         if form.is_valid():
             perro = form.save(commit=False)
+            perro.published_date = timezone.now()
+           
             perro.save()
-            
+          
     else:
         form = PerroForm()
     return render(request, 'MisPerris/perri_edit.html', {'form': form})

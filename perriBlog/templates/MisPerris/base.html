@@ -6,8 +6,7 @@
         <title>Mis perris</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        
         
         <link rel="icon" href="{% static 'img/logo.png' %}" />
         <link rel="stylesheet" href="{% static 'css/menu.css' %}">
@@ -34,6 +33,9 @@
                        <li class="nav"><a href="{% url 'index' %}">Inicio</a></li>
                        <li class="nav"><a href="{% url 'registro' %}">Registrate</a></li>
                        <li class="nav"><a href="{% url 'perri_list' %}">Galería</a></li>
+                       {% if user.is_authenticated %}
+                       <li class="nav"><a href="{% url 'perro_new' %}">Agregar Perro</a></li>
+                       {% endif %}
                     </ul>
                     
                </nav>    

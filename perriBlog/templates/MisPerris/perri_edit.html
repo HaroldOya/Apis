@@ -1,14 +1,14 @@
 {% extends 'MisPerris/base.html' %}
-
+{% load static %}
 {% block content %}
 <main>
         <h1 style="text-align: center" >Nuevo Perro</h1>
         <center>
                 <div class="Formulario">
-                        <form method="PERRO" class="perro-form">{% csrf_token %}
+                        <form method="POST" class="perro-form">{% csrf_token %}
                                 {{ form.as_p }}
-                                <button style="text-align: center" type="submit" class="save btn btn-default">Guardar</button>
-                            </form>
+                                <button  type="submit" >Guardar</button>
+                        </form>
                 </div>
         </center>
        

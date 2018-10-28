@@ -6,22 +6,51 @@
 
   <div class="item-galery">  
     <div class="texto">
-      {% if perros_count != 0 %}
+      <h1 class="titulos" style="text-align: center">Perros Adoptados</h1>
+      <hr>
         {% for perro in perros_adoptados %}
           <div class="item-galery-title">
             <h1>{{ perro.Nombre }}</h1>
           </div>
           
-          <p>{{ perro.Raza }}</p>    
+          <p>{{ perro.Raza }}</p> 
+            {% if perro.Imagen %}
             <img class="img-galery" src="{{ perro.Imagen.url }}" alt="Imagen perro 1">
+            {% endif %}
           <p>{{ perro.Descripcion }}</p>
           <p>{{ perro.Estado|linebreaksbr }}</p>
         {% endfor %}
-      {% else %}
-        <div class="item-galery">
-        <h2>No hay Perros adoptados</h2>
-        </div>
-      {% endif %}
+     
+
+      <h1 class="titulos" style="text-align: center">Perros Rescatados</h1>
+        {% for perro in perros_rescatado %}
+          <div class="item-galery-title">
+            <h1>{{ perro.Nombre }}</h1>
+          </div>
+          
+          <p>{{ perro.Raza }}</p>    
+          {% if perro.Imagen %}
+            <img class="img-galery" src="{{ perro.Imagen.url }}" alt="Imagen perro 1">
+            {% endif %}
+          <p>{{ perro.Descripcion }}</p>
+          <p>{{ perro.Estado|linebreaksbr }}</p>
+        {% endfor %}
+     
+
+      <h1 class="titulos" style="text-align: center">Perros Disponibles</h1>
+        {% for perro in perros_disponible %}
+          <div class="item-galery-title">
+            <h1>{{ perro.Nombre }}</h1>
+          </div>
+          
+          <p>{{ perro.Raza }}</p>    
+          {% if perro.Imagen %}
+            <img class="img-galery" src="{{ perro.Imagen.url }}" alt="Imagen perro 1">
+          {% endif %}
+          <p>{{ perro.Descripcion }}</p>
+          <p>{{ perro.Estado|linebreaksbr }}</p>
+        {% endfor %}
+      
     </div>
   </div>  
 </main>   
