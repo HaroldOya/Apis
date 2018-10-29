@@ -47,7 +47,11 @@
         background-color: white;
         padding: 20px 0px;
     }
-    
+    .img-galery{
+        height: 300px;
+        width: 350px;
+
+    }
     
     .textos{
         width: 100%;
