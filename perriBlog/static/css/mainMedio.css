@@ -16,6 +16,15 @@
         background-color: white;
         padding: 20px 0px;
     }
+    .item-galery {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        
+    }
     
     
     .textos{
