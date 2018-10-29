@@ -4,6 +4,7 @@ from .models import Perro
 from .models import Cliente
 from django.shortcuts import render, get_object_or_404
 from .forms import PerroForm
+from .forms import ClienteForm
 from django.shortcuts import redirect
 
 # Create your views here.
@@ -20,8 +21,7 @@ def perri_list(request):
 def index(request):
     return render(request, 'MisPerris/index.html')
 
-def registro(request):
-    return render(request, 'MisPerris/registro.html') 
+
  
 def perro_detail(request, pk):
     perro = get_object_or_404(Perro, pk=pk)
@@ -42,7 +42,7 @@ def perro_new(request):
 def perro_edit(request, pk):
     perro = get_object_or_404(Perro, pk=pk)
     if request.method == "POST":
-        form = PerroForm(request.POST, instance=perro)
+        form = PerroForm(request.POST,request.FILES or None, instance=perro)
         if form.is_valid():
             perro = form.save(commit=False)
             perro.published_date = timezone.now()
@@ -52,4 +52,15 @@ def perro_edit(request, pk):
         form = PerroForm(instance=perro)
     return render(request, 'MisPerris/perri_edit.html', {'form': form})
 
+def registro(request):
+    if request.method == "POST":
+        form = ClienteForm(request.POST or None, request.FILES or None)
+        if form.is_valid():
+            cliente = form.save(commit=False)
+            cliente.published_date = timezone.now()
+            cliente.save()
+              
+    else:
+        form = ClienteForm()
+    return render(request, 'MisPerris/registro.html', {'form': form})
 

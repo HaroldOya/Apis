@@ -23,10 +23,16 @@ class Cliente(models.Model):
     Rut = models.CharField(max_length=10)
     Nombre = models.CharField(max_length=200)
     FechaNac = models.DateTimeField(blank=True, null=True)
-    Telefono = models.IntegerField
+    Telefono = models.CharField(max_length=10)
     Region = models.CharField(max_length=200)
     Ciudad = models.CharField(max_length=200)
-    Vivienda = models.CharField(max_length=200)
+    VIVIENDA = (
+        ('Casa con patio Grande', 'Casa con patio Grande'),
+        ('Casa con patio pequeño', 'Casa con patio pequeño'),
+        ('Casa sin patio', 'Casa sin patio'),
+        ('Departamento', 'Departamento'),
+    )
+    Vivienda = models.CharField(max_length=200, choices=VIVIENDA)
 
 
     def __str__(self):

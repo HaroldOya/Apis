@@ -12,7 +12,9 @@
                <b><area-label>Estado: </area-label></b>{{ perro.Estado|linebreaksbr }} </p>
             <p class="desc">{{ perro.Descripcion }}</p>
             <br>
+            {% if user.is_authenticated %}
             <a href="{% url 'perro_edit' pk=perro.pk %}"><input type="button" value="Editar" class="deta"></a>
+            {% endif %}
             <br>
             </div>
         </div>
