@@ -16,6 +16,7 @@
         width: 50%;
         background-color: white;
         padding: 20px 0px;
+        
     }
     
     .galeria{
@@ -28,7 +29,18 @@
         display: flex;
         flex-wrap: wrap;
         text-align: center;
+        
       
+    }
+
+    .item-galery {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        
     }
 
     .nav{

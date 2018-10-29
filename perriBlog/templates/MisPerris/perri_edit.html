@@ -5,7 +5,7 @@
         <h1 style="text-align: center" >Nuevo Perro</h1>
         <center>
                 <div class="Formulario">
-                        <form method="POST" class="perro-form">{% csrf_token %}
+                        <form method="POST" class="perro-form" enctype="multipart/form-data">{% csrf_token %}
                                 {{ form.as_p }}
                                 <button  type="submit" >Guardar</button>
                         </form>

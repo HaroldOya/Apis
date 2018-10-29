@@ -1,0 +1,21 @@
+{% extends 'MisPerris/base.html' %}
+{% load static %}
+{% block content %}
+<main>
+    <div class="item-galery">  
+            <div class="texto">
+            <u><h1>{{ perro.Nombre }}</h1></u> 
+            {% if perro.Imagen %}
+                <img class="img-galery" src="{{ perro.Imagen.url }}" alt="Imagen perro 1">
+            {% endif %}
+            <p><b><area-label>Raza: </area-label></b>{{ perro.Raza }}     
+               <b><area-label>Estado: </area-label></b>{{ perro.Estado|linebreaksbr }} </p>
+            <p class="desc">{{ perro.Descripcion }}</p>
+            <br>
+            <a href="{% url 'perro_edit' pk=perro.pk %}"><input type="button" value="Editar" class="deta"></a>
+            <br>
+            </div>
+        </div>
+</main>
+   
+{% endblock %}

@@ -12,7 +12,7 @@ class Perro(models.Model):
         ('Adoptado', 'adoptado'),
     )
     Estado = models.CharField(max_length=20, choices=ESTADOS)
-    Imagen = models.ImageField(blank=True, null=True, upload_to="img/%Y/%m/%D/")
+    Imagen = models.ImageField()
     publish_date = models.DateTimeField(blank=True, null=True)
 
     def __str__(self):
