@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class PerriblogConfig(AppConfig):
-    name = 'perriblog'
+class PerriBlogConfig(AppConfig):
+    name = 'perriBlog'
