@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import Perro
+from .models import Oferta
 # Register your models here.
-admin.site.register(Perro)
+admin.site.register(Oferta)
