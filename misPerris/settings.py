@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'perriblog',
+    'perriBlog',
     'rest_framework',
     'corsheaders',
 ]
@@ -53,7 +53,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'misperris.urls'
+ROOT_URLCONF = 'misPerris.urls'
 
 TEMPLATES = [
     {
@@ -71,7 +71,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'misperris.wsgi.application'
+WSGI_APPLICATION = 'misPerris.wsgi.application'
 
 
 # Database
