@@ -2,8 +2,8 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url, include
 from rest_framework import routers
-from perriblog import views
-from perriblog.models import Perro
+from perriBlog import views
+from perriBlog.models import Perro
 
 router = routers.DefaultRouter()
 router.register(r'perros', views.PerroViewSet)
