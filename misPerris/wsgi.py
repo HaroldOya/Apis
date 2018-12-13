@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'misperris.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'misPerris.settings')
 
 application = get_wsgi_application()
